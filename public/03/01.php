@@ -1,19 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 <?php
 
-echo "Hello, World!";
+// Цей файл демонструє як інструкції розділяються за допомогою крапки з комою.
+// Кожна інструкція має закінчуватися символом ";", в іншому випадку Ви
+// отримаєте помилку.
+
+echo "Hello World!";
 echo PHP_EOL;
 echo "Welcome to the PHP club!";
 
-?>
-</body>
-</html>
-
+// Якщо файл містить лише PHP код, кінцевий тег PHP можна не писати.
