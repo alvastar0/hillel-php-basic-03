@@ -4,8 +4,8 @@
 // Кожна інструкція має закінчуватися символом ";", в іншому випадку Ви
 // отримаєте помилку.
 
-echo "Hello World!";
+echo 'Hello World!';
 echo PHP_EOL;
-echo "Welcome to the PHP club!";
+echo 'Welcome to the PHP club!';
 
 // Якщо файл містить лише PHP код, кінцевий тег PHP можна не писати.
