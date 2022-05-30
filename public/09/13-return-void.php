@@ -12,5 +12,5 @@ function say_hello(string $name): void
         return;
     }
 
-    echo 'Hello, ' . $name . '!' . PHP_EOL;
+    echo 'Hello, '.$name.'!'.PHP_EOL;
 }

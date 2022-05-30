@@ -12,4 +12,4 @@ function print_sum($a, $b)
 
 print_sum(10, 20);     // Ok
 print_sum(10, 20, 30); // Ok, но последнее значение "потеряется"
-//print_sum(10);            // Error
+//print_sum(10);       // Error

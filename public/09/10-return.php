@@ -18,11 +18,11 @@ function calculate($a, $b, $operation)
     };
 }
 
-// Оператор return возвращает значение в управление программой в том место,
+// Оператор return возвращает значение в управление программой в то место,
 // где была вызвана функция. Это значит, что вместо функции в код
 // "подставляется" значение, которое вернул "return".
-echo calculate(10, 10, '*') . PHP_EOL;
+echo calculate(10, 10, '*').PHP_EOL;
 
 if (0 === calculate(5, 5, '-')) {
-    echo 'This is zero' . PHP_EOL;
+    echo 'This is zero'.PHP_EOL;
 }
