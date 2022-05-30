@@ -20,5 +20,5 @@ function calculate(int $a, int $b, string $operation)
 }
 
 //echo calculate('string', [], null);        // Error
-//echo calculate(50.5, 50.5, '+') . PHP_EOL; // Error
+//echo calculate(50.5, 50.5, '+'); // Error
 echo calculate(50, 50, '+');   // Ok
