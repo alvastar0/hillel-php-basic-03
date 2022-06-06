@@ -1,16 +1,26 @@
 <?php
 
+session_start();
+
+require_once __DIR__.'/../functions/alerts.php';
+
 // 1. Проверить корректность запроса
 
 if ('POST' !== $_SERVER['REQUEST_METHOD']) {
-    http_response_code(405);
+    set_alert('error', 'Method not allowed!');
+
+    header('Location: /11-12/registration.php');
+
     exit;
 }
 
 // 2. Проверить данные
 
 if (!isset($_POST['email']) || !isset($_POST['password'])) {
-    http_response_code(400);
+    set_alert('error', 'E-mail and password are required!');
+
+    header('Location: /11-12/registration.php');
+
     exit;
 }
 
@@ -18,7 +28,10 @@ $email    = trim($_POST['email']);
 $password = md5($_POST['password']);
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    http_response_code(400);
+    set_alert('error', 'Invalid e-mail address!');
+
+    header('Location: /11-12/registration.php');
+
     exit;
 }
 
@@ -27,8 +40,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $filename = '../storage/users/'.$email.'.json';
 
 if (is_file($filename)) {
-    http_response_code(302);
-    exit('User already exists!');
+    set_alert('warning', 'User already exists!');
+
+    header('Location: /11-12/registration.php');
+
+    exit;
 }
 
 // 4. Добавить пользователя
